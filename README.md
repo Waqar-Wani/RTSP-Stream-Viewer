@@ -1,3 +1,7 @@
+Here is the updated content with the requested additions: 
+
+---
+
 # **RTSP Streaming and Testing Framework**
 
 ## **Project Overview**
@@ -42,7 +46,7 @@ pip install opencv-python numpy
 ## **Steps for Testing RTSP Streams**
 
 ### **1. Generating Local RTSP Streams**
-- Place video files (minimum 10 minutes duration) in the 'video` folder.
+- Place video files (minimum 10 minutes duration) in the `video` folder.
 - Run `Start Local RTSP.bat` to start the RTSP server.
 - Note the generated RTSP URLs in the console for testing.
 
@@ -73,6 +77,32 @@ pip install opencv-python numpy
   ```
 - Confirm the URL is streaming without errors.
 
+### **5. Increase Grid Size for Output Streams**:  
+   The grid size for the RTSP output can be modified based on your needs by updating the `rows` and `cols` variables in `RSTP Stream with Audio.py`:
+
+   **Code Snippet**:
+   ```python
+   rows, cols = 3, 3  # Example: Increase grid size to 3x3
+   screen_width, screen_height = 1920, 1080  # Adjust as per resolution
+   ```
+
+### **6. Add More Local RTSP Streams**:  
+   Generate additional local RTSP streams by adding new video paths and unique RTSP URLs in `Local Stream Test.py`:
+
+   **Code Snippet**:
+   ```python
+   # Example: Adding more local streams
+   video_paths = [
+       "sample_videos/video1.mp4",
+       "sample_videos/video2.mp4",
+       "sample_videos/video3.mp4"
+   ]
+   rtsp_urls = [
+       "rtsp://localhost:8554/stream1",
+       "rtsp://localhost:8554/stream2",
+       "rtsp://localhost:8554/stream3"
+   ]
+   ```
 ---
 
 ## **Known Issues**
@@ -89,6 +119,7 @@ pip install opencv-python numpy
 ---
 
 ## **Future Enhancements**
+
 1. **Integration with Raspberry Pi**:  
    Facilitate seamless use of the framework with Raspberry Pi for RTSP-supported cameras in home networks.
 
@@ -101,4 +132,14 @@ pip install opencv-python numpy
 4. **Enhanced User Interface**:  
    Develop a user-friendly interface for managing multiple streams and audio switching.
 
+5. **License Addition**:  
+   This project uses the MIT License for open collaboration.
+
 ---
+
+## **License**
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
+--- 
+
